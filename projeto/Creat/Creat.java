@@ -1,23 +1,23 @@
 package Creat;
 
 import java.util.Scanner;
+import Usuario.Usuario;
 
-public class Creat {
-  public String login;
-  public int senha;
-  public String name;
-  
-  public void create() {
+public class Creat {  
+  public Usuario create() {
+    Usuario usuario = new Usuario();
     Scanner scan = new Scanner(System.in);
   
     System.out.println("Crie sua conta");
     System.out.print("Digite um login: ");
-    this.login = scan.next();  
+    usuario.setLogin(scan.next());    
   
     System.out.print("Digite uma senha: ");
-    this.senha = scan.nextInt();   
+    usuario.setSenha(scan.nextInt());    
   
     System.out.println("Como voce quer ser chamado?");
-    this.name = scan.next();
+    usuario.setNome(scan.next());    
+
+    return usuario;
   }  
 }
