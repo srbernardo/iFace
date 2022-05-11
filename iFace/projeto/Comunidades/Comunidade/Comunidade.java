@@ -2,15 +2,14 @@ package Comunidades.Comunidade;
 
 import java.util.ArrayList;
 
-public class Comunidade {
-    private String nome = null;
+import Heranca.Nome.Nome;
+
+public class Comunidade extends Nome{
     private String descricao = null;
     private String dono = null;    
     public ArrayList<String> membros = new ArrayList<String>();
 
-    public String getNome() {
-        return this.nome;
-    }
+
     public String getDescricao() {
         return this.descricao;
     }
@@ -18,9 +17,6 @@ public class Comunidade {
         return this.dono;
     }   
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
